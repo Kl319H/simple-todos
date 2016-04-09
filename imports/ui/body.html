@@ -1,0 +1,19 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+      {{> createTask}}
+    </header>
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="createTask">
+  <form class="new-task">
+    <input type="text" name="text" placeholder="Type to add new tasks" />
+  </form>
+</template>
